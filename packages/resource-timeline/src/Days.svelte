@@ -25,7 +25,7 @@
     let debounceHandle = {};
     function reposition() {
         debounce(() => {
-            height = ceil(max(...runReposition(refs, $_viewDates))) + 10;
+            height = ceil(max(...runReposition(refs, $_viewDates))) + 2;
             $_resHs.set(resource, height);
             $_resHs = $_resHs;
         }, debounceHandle, _queue2);
