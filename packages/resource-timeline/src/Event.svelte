@@ -91,7 +91,7 @@
             // Month view
             width = chunk.days * 100;
             style =
-                `width:${width}%;`
+                `width:calc(${width}% - 45px);`
             ;
         }
         let bgColor = event.backgroundColor || resourceBackgroundColor(event, $resources) || $eventBackgroundColor || $eventColor;
