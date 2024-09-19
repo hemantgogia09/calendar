@@ -91,7 +91,7 @@
             // Month view
             width = chunk.days * 100;
             style =
-                `width:calc(${width}% - 45px);`
+                `margin-left: ${chunk.start.getDate() === 1? '0px':'20px'};width:calc(${width}% - ${chunk.start.getMonth() !== chunk.end.getMonth() || chunk.start.getDate() === 1? (chunk.start.getDate() === 1 ? '25px' :'20px'): '45px'});`
             ;
         }
         let bgColor = event.backgroundColor || resourceBackgroundColor(event, $resources) || $eventBackgroundColor || $eventColor;
