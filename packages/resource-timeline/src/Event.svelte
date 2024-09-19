@@ -91,7 +91,7 @@
             // Month view
             width = chunk.days * 100;
             style =
-                `margin-left: ${chunk.start.getDate() === 1? '0px':'20px'};width:calc(${width}% - ${chunk.start.getMonth() !== chunk.end.getMonth() || chunk.start.getDate() === 1? (chunk.start.getDate() === 1 ? '25px' :'20px'): '45px'});`
+                `margin-left: ${chunk.start.getDate() === 1? '0px':'32px'};width:calc(${width}% - ${chunk.start.getMonth() !== chunk.end.getMonth() || chunk.start.getDate() === 1? (chunk.start.getDate() === 1 ? '34px' :'30px'): '65px'});`
             ;
         }
         let bgColor = event.backgroundColor || resourceBackgroundColor(event, $resources) || $eventBackgroundColor || $eventColor;
@@ -104,7 +104,7 @@
                 marginTop = _margin;
             }
         }
-        style += `margin-top:${marginTop}px;`;
+        // style += `margin-top:${marginTop}px;`;
         if (bgColor) {
             style += `background-color:${bgColor};`;
         }
