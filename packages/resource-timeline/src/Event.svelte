@@ -88,10 +88,11 @@
                 `width:${width}px;`
             ;
         } else {
+            const lastDayOfMonth = new Date(new Date().getFullYear(), new Date().getMonth()+1, 0);
             // Month view
             width = chunk.days * 100;
             style =
-                `margin-left: ${chunk.start.getDate() === 1? '0px':'32px'};width:calc(${width}% - ${chunk.start.getMonth() !== chunk.end.getMonth() || chunk.start.getDate() === 1? (chunk.start.getDate() === 1 ? '34px' :'30px'): '65px'});`
+                `margin-left: ${chunk.start.getDate() === 1? '0px':'32px'};width:calc(${width}% - ${chunk.end >= lastDayOfMonth? '0px': chunk.start.getMonth() !== chunk.end.getMonth() || chunk.start.getDate() === 1? (chunk.start.getDate() === 1 ? '34px' :'30px'): '65px'});`
             ;
         }
         let bgColor = event.backgroundColor || resourceBackgroundColor(event, $resources) || $eventBackgroundColor || $eventColor;
